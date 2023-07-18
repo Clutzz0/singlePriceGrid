@@ -1,0 +1,132 @@
+:root {
+	--primary-color: #2bb3b1;
+	--secondary-color: #4abebd;
+	--tertiary-color: #e6eff6;
+	--accent-color: #bfdf32;
+
+	--white: #fff;
+	--black: #000;
+}
+
+/* Universal */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+
+/* Content */
+
+body {
+	background-color: var(--tertiary-color);
+}
+
+main {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.price-card {
+	width: 35%;
+	border-radius: 30px;
+	box-shadow: 0 0 8px slategray;
+}
+
+.white-box {
+	background-color: var(--white);
+	padding: 40px;
+	border-radius: 30px 30px 0 0;
+}
+
+.white-box h1 {
+	color: var(--primary-color);
+	margin-bottom: 20px;
+}
+
+.white-box h2 {
+	color: var(--accent-color);
+	margin-bottom: 10px;
+}
+
+.blue-box {
+	display: flex;
+	justify-content: space-around;
+	color: var(--white);
+}
+
+.sign-up {
+	background-color: var(--primary-color);
+	flex: auto;
+	padding: 40px;
+	border-radius: 0 0 0 30px;
+}
+
+.sign-up h2 {
+	margin-bottom: 10px;
+}
+
+.sign-up span {
+	font-size: 3rem;
+	margin-right: 10px;
+	color: var(--white);
+}
+
+.sign-up h3 {
+	color: var(--tertiary-color);
+}
+
+.sign-up button {
+	width: 100%;
+	background-color: var(--accent-color);
+	color: inherit;
+	border: none;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+.about-us {
+	background-color: var(--secondary-color);
+	flex: auto;
+	padding: 40px;
+	border-radius: 0 0 30px 0;
+}
+
+.about-us ul {
+	list-style: none;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) and (min-width: 340px) {
+	main {
+		font-size: 12px;
+		margin: 30px auto;
+	}
+
+	.price-card {
+		width: 80%;
+		border-radius: 10px;
+	}
+
+	.white-box {
+		border-radius: 10px 10px 0 0;
+	}
+
+	.blue-box {
+		flex-direction: column;
+	}
+
+	.sign-up {
+		border-radius: 0;
+	}
+
+	.about-us {
+		border-radius: 0 0 10px 10px;
+	}
+}
